@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         String n1S = number1EditText.getText().toString();
         String n2S = number2EditText.getText().toString();
         if(n1S.isEmpty() || n2S.isEmpty()) {
-            Toast.makeText(this, "Enter the 2 numbers!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Enter 2 numbers!", Toast.LENGTH_LONG).show();
             return;
         }
         double n1 = Double.parseDouble(n1S);
@@ -86,6 +86,21 @@ public class MainActivity extends AppCompatActivity {
         double result = n1*n2;
         resultTextView.setText(String.valueOf(result));
     }
-    private void divide() {}
+    private void divide() {
+        String n1S = number1EditText.getText().toString();
+        String n2S = number2EditText.getText().toString();
+        if(n1S.isEmpty() || n2S.isEmpty()) {
+            Toast.makeText(this, "Enter 2 numbers!", Toast.LENGTH_LONG).show();
+            return;
+        }
+        double n1 = Double.parseDouble(n1S);
+        double n2 = Double.parseDouble(n2S);
+        if(n1==0 || n2==0) {
+            Toast.makeText(this, "It's not possible to divide by 0", Toast.LENGTH_LONG).show();
+            return;
+        }
+        double result = n1/n2;
+        resultTextView.setText(String.valueOf(result));
+    }
 
 }
