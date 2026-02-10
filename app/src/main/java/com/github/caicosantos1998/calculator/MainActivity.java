@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        bindComponent();
+        createListeners();
     }
 
     private void bindComponent() {
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         subtractionButton = findViewById(R.id.subtractionButton);
         multiplicationButton = findViewById(R.id.multiplicationButton);
         divisionButton = findViewById(R.id.divisionButton);
+        resultTextView = findViewById(R.id.resultTextView);
     }
 
     private void createListeners() {
@@ -54,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         String n1S = number1EditText.getText().toString();
         String n2S = number2EditText.getText().toString();
         if(n1S.isEmpty() || n2S.isEmpty()) {
-            Toast.makeText(this, "Enter 2 numbers!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Field Required!", Toast.LENGTH_LONG).show();
             return;
         }
         double n1 = Double.parseDouble(n1S);
@@ -66,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         String n1S = number1EditText.getText().toString();
         String n2S = number2EditText.getText().toString();
         if(n1S.isEmpty() || n2S.isEmpty()) {
-            Toast.makeText(this, "Enter 2 numbers!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Field Required!", Toast.LENGTH_LONG).show();
             return;
         }
         double n1 = Double.parseDouble(n1S);
@@ -78,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         String n1S = number1EditText.getText().toString();
         String n2S = number2EditText.getText().toString();
         if(n1S.isEmpty() || n2S.isEmpty()) {
-            Toast.makeText(this, "Enter 2 numbers!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Field Required!", Toast.LENGTH_LONG).show();
             return;
         }
         double n1 = Double.parseDouble(n1S);
@@ -90,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         String n1S = number1EditText.getText().toString();
         String n2S = number2EditText.getText().toString();
         if(n1S.isEmpty() || n2S.isEmpty()) {
-            Toast.makeText(this, "Enter 2 numbers!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Field Required!", Toast.LENGTH_LONG).show();
             return;
         }
         double n1 = Double.parseDouble(n1S);
