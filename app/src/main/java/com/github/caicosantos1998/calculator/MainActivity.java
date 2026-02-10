@@ -41,4 +41,17 @@ public class MainActivity extends AppCompatActivity {
         multiplicationButton = findViewById(R.id.multiplicationButton);
         divisionButton = findViewById(R.id.divisionButton);
     }
+
+    private void createListeners() {
+        additionButton.setOnClickListener(event -> sum());
+        subtractionButton.setOnClickListener(event -> subtract());
+        multiplicationButton.setOnClickListener(event -> multiply());
+        divisionButton.setOnClickListener(event -> divide());
+    }
+
+    private void sum() {}
+    private void subtract() {}
+    private void multiply() {}
+    private void divide() {}
+
 }
