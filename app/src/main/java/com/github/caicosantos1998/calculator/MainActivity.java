@@ -62,7 +62,18 @@ public class MainActivity extends AppCompatActivity {
         double result = n1 + n2;
         resultTextView.setText(String.valueOf(result));
     }
-    private void subtract() {}
+    private void subtract() {
+        String n1S = number1EditText.getText().toString();
+        String n2S = number2EditText.getText().toString();
+        if(n1S.isEmpty() || n2S.isEmpty()) {
+            Toast.makeText(this, "Enter 2 numbers!", Toast.LENGTH_LONG).show();
+            return;
+        }
+        double n1 = Double.parseDouble(n1S);
+        double n2 = Double.parseDouble(n2S);
+        double result = n1-n2;
+        resultTextView.setText(String.valueOf(result));
+    }
     private void multiply() {}
     private void divide() {}
 
